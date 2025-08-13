@@ -6,6 +6,7 @@ import signal
 import sys
 import yaml
 
+
 def parse_args(default_config_file: str, default_log_config: str) -> argparse.Namespace:
     argv = sys.argv[1:]
     parser = argparse.ArgumentParser(add_help=True)

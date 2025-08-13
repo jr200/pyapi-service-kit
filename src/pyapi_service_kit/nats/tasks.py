@@ -33,7 +33,7 @@ async def subscribe_task(
             raise
 
     LOGGER.info(f"[NATS Task] Subscribing to {listen_subject}")
-    return asyncio.create_task(subscription_wrapper())
+    return await subscription_wrapper()
 
 
 async def request_reply_task(
@@ -59,7 +59,7 @@ async def request_reply_task(
             raise
 
     LOGGER.info(f"[NATS Task] Request-reply from {api_subject}")
-    return asyncio.create_task(request_response_wrapper())
+    return await request_response_wrapper()
 
 
 async def periodic_publisher_task(
@@ -69,7 +69,7 @@ async def periodic_publisher_task(
     cb: Callable[..., Awaitable[NatsPayload]],
     *args: Any,
     **kwargs: Any,
-) -> asyncio.Task:
+):
     async def periodic_wrapper():
         counter = 0
         while True:
@@ -81,7 +81,7 @@ async def periodic_publisher_task(
             await asyncio.sleep(timeout.total_seconds())
 
     LOGGER.info(f"[NATS Task] Periodic publisher to {publish_subject}")
-    return asyncio.create_task(periodic_wrapper())
+    return await periodic_wrapper()
 
 
 async def triggered_js_publish_task(
@@ -89,7 +89,7 @@ async def triggered_js_publish_task(
     listen_subject: str,
     publish_subject: str,
     cb: Callable[..., Awaitable[NatsPayload]],
-) -> asyncio.Task:
+):
     js = nc.jetstream()
 
     async def message_handler(msg):
@@ -101,7 +101,9 @@ async def triggered_js_publish_task(
         except Exception as e:
             LOGGER.error(f"Error handling message on {listen_subject}", exc_info=e)
 
-    LOGGER.info(f"[NATS Task] Triggered {listen_subject}, js_publish to {publish_subject}")
+    LOGGER.info(
+        f"[NATS Task] Triggered {listen_subject}, js_publish to {publish_subject}"
+    )
     return await subscribe_task(nc, listen_subject, message_handler)
 
 
@@ -111,7 +113,7 @@ async def triggered_kv_put_task(
     kv_bucket: str,
     key: str,
     cb: Callable[..., Awaitable[NatsPayload]],
-) -> asyncio.Task:
+):
     js = nc.jetstream()
 
     async def message_handler(msg):
@@ -132,7 +134,7 @@ async def once_kv_put_task(
     kv_bucket: str,
     key: str,
     cb: Callable[..., Awaitable[NatsPayload]],
-) -> asyncio.Task:
+):
     js = nc.jetstream()
 
     async def once_task():
