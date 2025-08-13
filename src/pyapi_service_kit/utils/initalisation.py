@@ -1,17 +1,12 @@
 import argparse
 import asyncio
-from importlib.resources import files
 import logging
 import logging.config
 import signal
 import sys
 import yaml
 
-ROOT_DIR = ".."
-DEFAULT_CONFIG_FILE = str(files(__package__).joinpath(ROOT_DIR, "config.yaml"))
-
-
-def parse_args() -> argparse.Namespace:
+def parse_args(default_config_file: str, default_log_config: str) -> argparse.Namespace:
     argv = sys.argv[1:]
     parser = argparse.ArgumentParser(add_help=True)
 
@@ -23,7 +18,7 @@ def parse_args() -> argparse.Namespace:
         "-l",
         "--log-config",
         help="Path to logger config",
-        default=str(files(__package__).joinpath(ROOT_DIR, "logging.yaml")),
+        default=default_log_config,
         action="store",
         dest="CONFIG_LOG",
     )
@@ -31,7 +26,7 @@ def parse_args() -> argparse.Namespace:
     args = parser.parse_args(argv)
 
     if not args.CONFIG_FILE:
-        args.CONFIG_FILE = DEFAULT_CONFIG_FILE
+        args.CONFIG_FILE = default_config_file
 
     return args
 

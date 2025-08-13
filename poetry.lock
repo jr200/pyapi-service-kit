@@ -476,14 +476,14 @@ xlsxwriter = ["xlsxwriter"]
 
 [[package]]
 name = "polars-hist-db"
-version = "0.8.0"
+version = "0.8.2"
 description = "(dsv,jetstream) --> dataframe <--> bitemporal-tables"
 optional = false
 python-versions = "<4.0,>=3.12"
 groups = ["main"]
 files = [
-    {file = "polars_hist_db-0.8.0-py3-none-any.whl", hash = "sha256:d54e08543ea9e0ce7d8e7a5cf4d0a04b732667a0fe5e234c25d208f730886ccc"},
-    {file = "polars_hist_db-0.8.0.tar.gz", hash = "sha256:aac3f543a87b4c3d1ead63bb6dd3294f7f0256955b9a09339b61d37ff81f743d"},
+    {file = "polars_hist_db-0.8.2-py3-none-any.whl", hash = "sha256:c835e33c54687e154035a4d8131c0922532be312ecedc89513190ecaf5dd3d7f"},
+    {file = "polars_hist_db-0.8.2.tar.gz", hash = "sha256:cc061bb114dfda34129a07bc4feb502c3f8574df121ffde99456cf00b3d90d08"},
 ]
 
 [package.dependencies]
@@ -494,7 +494,7 @@ pytz = ">=2025.2,<2026.0"
 pyyaml = ">=6.0.2,<7.0.0"
 scandir-rs = "2.8.0"
 sql-metadata = ">=2.17.0,<3.0.0"
-sqlalchemy = {version = ">=2.0.42,<3.0.0", extras = ["asyncio"]}
+sqlalchemy = {version = ">=2.0.43,<3.0.0", extras = ["asyncio"]}
 
 [package.extras]
 nats = ["nats-py (>=2.11.0,<3.0.0)"]
@@ -949,4 +949,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<4.0"
-content-hash = "0dde281e4971bdb13b56d7724873509493912321c4ef0c03627fb2bcf9153562"
+content-hash = "9d55f78b35ccac95f9bd3a582bcea39e1d0b51b357a2f5eb79110b7abe3cd9aa"

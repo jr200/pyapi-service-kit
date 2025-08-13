@@ -32,6 +32,7 @@ async def subscribe_task(
             LOGGER.error(f"Error in subscription {listen_subject}: {e}")
             raise
 
+    LOGGER.info(f"[NATS Task] Subscribing to {listen_subject}")
     return asyncio.create_task(subscription_wrapper())
 
 
@@ -57,6 +58,7 @@ async def request_reply_task(
             LOGGER.error(f"Error in request_reply task {api_subject}: {e}")
             raise
 
+    LOGGER.info(f"[NATS Task] Request-reply from {api_subject}")
     return asyncio.create_task(request_response_wrapper())
 
 
@@ -78,6 +80,7 @@ async def periodic_publisher_task(
                 LOGGER.error(f"Error in periodic task {cb.__name__}: {e}")
             await asyncio.sleep(timeout.total_seconds())
 
+    LOGGER.info(f"[NATS Task] Periodic publisher to {publish_subject}")
     return asyncio.create_task(periodic_wrapper())
 
 
@@ -98,6 +101,7 @@ async def triggered_js_publish_task(
         except Exception as e:
             LOGGER.error(f"Error handling message on {listen_subject}", exc_info=e)
 
+    LOGGER.info(f"[NATS Task] Triggered {listen_subject}, js_publish to {publish_subject}")
     return await subscribe_task(nc, listen_subject, message_handler)
 
 
@@ -119,6 +123,7 @@ async def triggered_kv_put_task(
         except Exception as e:
             LOGGER.error(f"Error handling message on {listen_subject}", exc_info=e)
 
+    LOGGER.info(f"[NATS Task] Triggered {listen_subject}, kv_put to {kv_bucket}[{key}]")
     return await subscribe_task(nc, listen_subject, message_handler)
 
 
@@ -139,4 +144,5 @@ async def once_kv_put_task(
         except Exception as e:
             LOGGER.error(f"Error handling message on {kv_bucket}[{key}]", exc_info=e)
 
+    LOGGER.info(f"[NATS Task] One-time put {kv_bucket}[{key}]")
     return await once_task()
