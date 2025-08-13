@@ -1,6 +1,6 @@
 [project]
 name = "pyapi-service-kit"
-version = "0.0.1"
+version = "0.0.2"
 description = "some utiltiies used by backend python services"
 license = "LICENSE"
 authors = [
@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.12,<4.0"
 
 dependencies = [
-    "nats-py (>=2.10.0,<3.0.0)",
+    "nats-py (>=2.11.0,<3.0.0)",
     "nkeys (>=0.2.1,<0.3.0)",
     "polars (>=1.30.0,<2.0.0)",
     "pyyaml (>=6.0.2,<7.0.0)",
