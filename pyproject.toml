@@ -1,6 +1,6 @@
 [project]
 name = "pyapi-service-kit"
-version = "0.0.4"
+version = "0.0.5"
 description = "some utiltiies used by backend python services"
 license = "LICENSE"
 authors = [
