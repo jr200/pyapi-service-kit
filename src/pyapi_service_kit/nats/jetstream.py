@@ -23,7 +23,6 @@ async def create_jetstream_streams(js: JetStreamContext, config: List[StreamConf
 
 
 async def _create_jetstream_stream(js: JetStreamContext, config: StreamConfig):
-
     try:
         if config.recreate_if_exists:
             await try_delete_stream(js, config.name)
