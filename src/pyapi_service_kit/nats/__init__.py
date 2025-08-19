@@ -1,3 +1,4 @@
+from .config import NatsConfig, StreamConfig
 from .core import make_nats_client
 from .jetstream import create_jetstream_streams, try_delete_stream
 from .kv import create_nats_key_value_bucket
@@ -13,6 +14,8 @@ from .tasks import (
 )
 
 __all__ = [
+    "NatsConfig",
+    "StreamConfig",
     "make_nats_client",
     "create_jetstream_streams",
     "try_delete_stream",

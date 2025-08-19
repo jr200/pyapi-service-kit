@@ -2,13 +2,14 @@ import logging
 from nats.aio.client import Client as NATS
 from nats.js.client import JetStreamContext
 
-from typing import Any, Dict
+from typing import Any, Dict, List
 
 LOGGER = logging.getLogger(__name__)
 
 
 async def make_nats_client(
-    nats_config: Dict[str, Any],
+    servers: List[str],
+    options: Dict[str, Any],
 ) -> tuple[NATS, JetStreamContext]:
     nc = NATS()
 
@@ -24,11 +25,11 @@ async def make_nats_client(
 
     try:
         await nc.connect(
-            servers=nats_config["servers"],
+            servers=servers,
             disconnected_cb=disconnected_cb,
             error_cb=error_cb,
             reconnected_cb=reconnected_cb,
-            **nats_config["options"],
+            **options,
         )
 
         if nc.connected_url:
