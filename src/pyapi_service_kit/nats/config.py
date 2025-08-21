@@ -20,7 +20,7 @@ class NatsConfig:
         return cls(
             streams=[
                 StreamConfig(**stream)
-                for stream in data["streams"]
+                for stream in data.get("streams", [])
                 if isinstance(stream, dict)
             ],
             options=data.get("options", {}),
