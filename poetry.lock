@@ -476,14 +476,14 @@ xlsxwriter = ["xlsxwriter"]
 
 [[package]]
 name = "polars-hist-db"
-version = "0.8.11"
+version = "0.8.12"
 description = "(dsv,jetstream) --> dataframe <--> bitemporal-tables"
 optional = false
 python-versions = "<4.0,>=3.12"
 groups = ["main"]
 files = [
-    {file = "polars_hist_db-0.8.11-py3-none-any.whl", hash = "sha256:8e682b9ffb92b17f8ae4f4dc9c84925aa7dfec4cb27bf3f0ad77481fc9dd16ed"},
-    {file = "polars_hist_db-0.8.11.tar.gz", hash = "sha256:648fa6455b1e6b8b5da2ecc38260564f8260c557f236779a9c928310aa48eab3"},
+    {file = "polars_hist_db-0.8.12-py3-none-any.whl", hash = "sha256:ea1dd61a317772e1d9f0f086bc7ebdfce0172c5249940d563f00472c2a19cf42"},
+    {file = "polars_hist_db-0.8.12.tar.gz", hash = "sha256:a6ae4892782b2cb6f88e5ca3c3d5f3fbad4147b3cf3c7c3cf89a3ba938ec3a98"},
 ]
 
 [package.dependencies]
@@ -888,14 +888,14 @@ doc = ["sphinx"]
 
 [[package]]
 name = "types-python-dateutil"
-version = "2.9.0.20250809"
+version = "2.9.0.20250822"
 description = "Typing stubs for python-dateutil"
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "types_python_dateutil-2.9.0.20250809-py3-none-any.whl", hash = "sha256:768890cac4f2d7fd9e0feb6f3217fce2abbfdfc0cadd38d11fba325a815e4b9f"},
-    {file = "types_python_dateutil-2.9.0.20250809.tar.gz", hash = "sha256:69cbf8d15ef7a75c3801d65d63466e46ac25a0baa678d89d0a137fc31a608cc1"},
+    {file = "types_python_dateutil-2.9.0.20250822-py3-none-any.whl", hash = "sha256:849d52b737e10a6dc6621d2bd7940ec7c65fcb69e6aa2882acf4e56b2b508ddc"},
+    {file = "types_python_dateutil-2.9.0.20250822.tar.gz", hash = "sha256:84c92c34bd8e68b117bff742bc00b692a1e8531262d4507b33afcc9f7716cd53"},
 ]
 
 [[package]]
@@ -912,14 +912,14 @@ files = [
 
 [[package]]
 name = "types-pyyaml"
-version = "6.0.12.20250809"
+version = "6.0.12.20250822"
 description = "Typing stubs for PyYAML"
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "types_pyyaml-6.0.12.20250809-py3-none-any.whl", hash = "sha256:032b6003b798e7de1a1ddfeefee32fac6486bdfe4845e0ae0e7fb3ee4512b52f"},
-    {file = "types_pyyaml-6.0.12.20250809.tar.gz", hash = "sha256:af4a1aca028f18e75297da2ee0da465f799627370d74073e96fee876524f61b5"},
+    {file = "types_pyyaml-6.0.12.20250822-py3-none-any.whl", hash = "sha256:1fe1a5e146aa315483592d292b72a172b65b946a6d98aa6ddd8e4aa838ab7098"},
+    {file = "types_pyyaml-6.0.12.20250822.tar.gz", hash = "sha256:259f1d93079d335730a9db7cff2bcaf65d7e04b4a56b5927d49a612199b59413"},
 ]
 
 [[package]]
