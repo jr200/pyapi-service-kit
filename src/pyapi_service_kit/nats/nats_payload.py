@@ -8,6 +8,7 @@ from polars_hist_db.utils import to_ipc_b64
 
 EncodableType = Literal["json", "ipc", "epoch_ms", "error"]
 
+
 def _encode_data(type: EncodableType, data: Any) -> str | int | bytes:
     encodable_result: str | int | bytes
     if type == "ipc":
@@ -25,6 +26,7 @@ def _encode_data(type: EncodableType, data: Any) -> str | int | bytes:
         encodable_result = data
 
     return encodable_result
+
 
 @dataclass
 class NatsPayload:

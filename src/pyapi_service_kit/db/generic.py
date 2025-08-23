@@ -9,7 +9,7 @@ from sqlalchemy.engine import Connection
 from nats.aio.msg import Msg
 
 from ..nats.nats_payload import NatsPayload
-from ..utils.time import parse_zoned_iso
+from ..time.parser import parse_zoned_iso
 
 LOGGER = logging.getLogger(__name__)
 

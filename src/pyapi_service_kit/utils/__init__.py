@@ -1,7 +1,6 @@
 from .initalisation import parse_args, initialise_logging, create_stop_event
 from .nested_enum import NestedEnum
 from .templated_enum import TemplatedEnum, NestedTemplatedEnum
-from .time import parse_zoned_iso
 
 __all__ = [
     "validate_guid",
@@ -11,6 +10,5 @@ __all__ = [
     "NestedEnum",
     "TemplatedEnum",
     "NestedTemplatedEnum",
-    "parse_zoned_iso",
     "mark_service_ready",
 ]
