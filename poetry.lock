@@ -476,14 +476,14 @@ xlsxwriter = ["xlsxwriter"]
 
 [[package]]
 name = "polars-hist-db"
-version = "0.8.12"
+version = "0.8.13"
 description = "(dsv,jetstream) --> dataframe <--> bitemporal-tables"
 optional = false
 python-versions = "<4.0,>=3.12"
 groups = ["main"]
 files = [
-    {file = "polars_hist_db-0.8.12-py3-none-any.whl", hash = "sha256:ea1dd61a317772e1d9f0f086bc7ebdfce0172c5249940d563f00472c2a19cf42"},
-    {file = "polars_hist_db-0.8.12.tar.gz", hash = "sha256:a6ae4892782b2cb6f88e5ca3c3d5f3fbad4147b3cf3c7c3cf89a3ba938ec3a98"},
+    {file = "polars_hist_db-0.8.13-py3-none-any.whl", hash = "sha256:213d06f0faf6ec71b4940eb6a90290e0961d2ed678515ecffc8164919431f2a8"},
+    {file = "polars_hist_db-0.8.13.tar.gz", hash = "sha256:c073676ba017dfe8f74aecfd13fc3c28d379a0bc0f79fff787e8db311fd9bf99"},
 ]
 
 [package.dependencies]
@@ -949,4 +949,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<4.0"
-content-hash = "a1d108d2b221093a335592772aba2a2a815a92a17ec00b0860f349ffe461bd3d"
+content-hash = "e40c182bbab6aa1be4c882e6b47578364389f46e50374465e52261193f793967"
