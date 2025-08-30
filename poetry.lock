@@ -476,20 +476,20 @@ xlsxwriter = ["xlsxwriter"]
 
 [[package]]
 name = "polars-hist-db"
-version = "0.8.16"
+version = "0.8.23"
 description = "(dsv,jetstream) --> dataframe <--> bitemporal-tables"
 optional = false
 python-versions = "<4.0,>=3.12"
 groups = ["main"]
 files = [
-    {file = "polars_hist_db-0.8.16-py3-none-any.whl", hash = "sha256:1e5a67083a156c3bb744784df287b13ab25643b7e2227a4d19942d8c7605f372"},
-    {file = "polars_hist_db-0.8.16.tar.gz", hash = "sha256:f2292032fb3a75983e003080c91deffd7bad78a9913fae217f05d23baec21f57"},
+    {file = "polars_hist_db-0.8.23-py3-none-any.whl", hash = "sha256:9011ea1e3f28474b1125ba73f31adc16214893e69c62609065e60ffb3a3799cd"},
+    {file = "polars_hist_db-0.8.23.tar.gz", hash = "sha256:71678621ee81e54c65759116c6fce42616afc46ab17f973b08f08e7aa6b96108"},
 ]
 
 [package.dependencies]
 pandas = ">=2.3.0,<3.0.0"
 pyarrow = ">=21.0.0,<22.0.0"
-pymysql = ">=1.1.1,<2.0.0"
+pymysql = ">=1.1.2,<2.0.0"
 pytz = ">=2025.2,<2026.0"
 pyyaml = ">=6.0.2,<7.0.0"
 scandir-rs = "2.8.0"
@@ -570,14 +570,14 @@ files = [
 
 [[package]]
 name = "pymysql"
-version = "1.1.1"
+version = "1.1.2"
 description = "Pure Python MySQL Driver"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "PyMySQL-1.1.1-py3-none-any.whl", hash = "sha256:4de15da4c61dc132f4fb9ab763063e693d521a80fd0e87943b9a453dd4c19d6c"},
-    {file = "pymysql-1.1.1.tar.gz", hash = "sha256:e127611aaf2b417403c60bf4dc570124aeb4a57f5f37b8e95ae399a42f904cd0"},
+    {file = "pymysql-1.1.2-py3-none-any.whl", hash = "sha256:e6b1d89711dd51f8f74b1631fe08f039e7d76cf67a42a323d3178f0f25762ed9"},
+    {file = "pymysql-1.1.2.tar.gz", hash = "sha256:4961d3e165614ae65014e361811a724e2044ad3ea3739de9903ae7c21f539f03"},
 ]
 
 [package.extras]
@@ -924,14 +924,14 @@ files = [
 
 [[package]]
 name = "typing-extensions"
-version = "4.14.1"
+version = "4.15.0"
 description = "Backported and Experimental Type Hints for Python 3.9+"
 optional = false
 python-versions = ">=3.9"
 groups = ["main", "dev"]
 files = [
-    {file = "typing_extensions-4.14.1-py3-none-any.whl", hash = "sha256:d1e1e3b58374dc93031d6eda2420a48ea44a36c2b4766a4fdeb3710755731d76"},
-    {file = "typing_extensions-4.14.1.tar.gz", hash = "sha256:38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"},
+    {file = "typing_extensions-4.15.0-py3-none-any.whl", hash = "sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"},
+    {file = "typing_extensions-4.15.0.tar.gz", hash = "sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"},
 ]
 
 [[package]]
@@ -949,4 +949,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<4.0"
-content-hash = "8268c4d71c161e3b71b03457c6886e3da7df654f0287123e3086077ed78b0096"
+content-hash = "66caf619645c4e72d818d9f5406cd7cfc452560b1887496ab235420c31338f31"

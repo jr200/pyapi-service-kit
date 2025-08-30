@@ -102,7 +102,7 @@ async def triggered_js_publish_task(
             LOGGER.error(f"Error handling message on {listen_subject}", exc_info=e)
 
     LOGGER.info(
-        f"[NATS Task] Triggered {listen_subject}, js_publish to {publish_subject}"
+        f"[NATS Task] Setup trigger for {listen_subject}, js_publish to {publish_subject}"
     )
     return await subscribe_task(nc, listen_subject, message_handler)
 
@@ -125,7 +125,7 @@ async def triggered_kv_put_task(
         except Exception as e:
             LOGGER.error(f"Error handling message on {listen_subject}", exc_info=e)
 
-    LOGGER.info(f"[NATS Task] Triggered {listen_subject}, kv_put to {kv_bucket}[{key}]")
+    LOGGER.info(f"[NATS Task] Setup trigger for {listen_subject}, kv_put to {kv_bucket}[{key}]")
     return await subscribe_task(nc, listen_subject, message_handler)
 
 
@@ -146,5 +146,5 @@ async def once_kv_put_task(
         except Exception as e:
             LOGGER.error(f"Error handling message on {kv_bucket}[{key}]", exc_info=e)
 
-    LOGGER.info(f"[NATS Task] One-time put {kv_bucket}[{key}]")
+    LOGGER.info(f"[NATS Task] Setup one-time kv_put to {kv_bucket}[{key}]")
     return await once_task()
